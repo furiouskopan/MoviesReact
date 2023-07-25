@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px; 
+  opacity: 0.8; 
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(4, 47, 46)), url('bground.jpg'); 
+}
+
+h1 {
+    color: white;
+    text-shadow:
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+.movie-poster {
+    transition: transform 0.2s ease-in-out;
+}
+  
+.movie-poster:hover {
+    transform: scale(1.05);
+}
+  
+@keyframes slide-in-out {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+.animate-slide-in-out {
+    animation: slide-in-out 0.2s forwards;
+}
