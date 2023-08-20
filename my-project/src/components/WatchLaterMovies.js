@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const WatchLaterMovies = () => {
   const [watchLaterList, setWatchLaterList] = useState([]);
   const [movies, setMovies] = useState([]);
-  const [sortCriteria, setSortCriteria] = useState('added'); // Default sorting by last one added
-  const [loading, setLoading] = useState(true); // Initialize loading state as true
+  const [sortCriteria, setSortCriteria] = useState('added'); 
+  const [loading, setLoading] = useState(true); 
 
   // Load the "Watch Later" list from local storage when the component mounts
   useEffect(() => {
@@ -18,7 +18,7 @@ const WatchLaterMovies = () => {
   // Fetch movie details whenever the watchLaterList changes
   useEffect(() => {
     const fetchMovies = async () => {
-      setLoading(true); // Set loading to true before fetching movies
+      setLoading(true);
 
       const moviesData = await Promise.all(
         watchLaterList.map(async (id) => {
@@ -26,7 +26,7 @@ const WatchLaterMovies = () => {
           const movie = await response.json();
           return {
             ...movie,
-            createdAt: watchLaterList.indexOf(id), // Add the createdAt property
+            createdAt: watchLaterList.indexOf(id), 
           };
         })
       );
@@ -34,7 +34,7 @@ const WatchLaterMovies = () => {
       // Sort the movies based on the selected criteria
       const sortedMovies = moviesData.sort((a, b) => {
         if (sortCriteria === 'added') {
-          return b.createdAt - a.createdAt; // Sort by createdAt in descending order
+          return b.createdAt - a.createdAt; 
         } else if (sortCriteria === 'year') {
           return a.Year.localeCompare(b.Year);
         } else if (sortCriteria === 'rating') {
@@ -44,7 +44,7 @@ const WatchLaterMovies = () => {
       });
 
       setMovies(sortedMovies);
-      setLoading(false); // Set loading to false after fetching movies
+      setLoading(false);
     };
     fetchMovies();
   }, [watchLaterList, sortCriteria]);

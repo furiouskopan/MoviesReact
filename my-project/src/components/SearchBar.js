@@ -1,13 +1,13 @@
-import { useNavigate } from 'react-router-dom'; // useNavigate replaces useHistory in v6
+import { useNavigate } from 'react-router-dom';
 import React, {  useState } from 'react';
 
 const SearchBar = ({ setSearch }) => {
   const [searchInput, setSearchInput] = useState('');
-  const navigate = useNavigate(); // Get the navigate function
+  const navigate = useNavigate(); 
 
   const handleSearch = () => {
     setSearch(searchInput);
-    navigate('/'); // Navigate to home page
+    navigate('/'); 
   };
 
   const handleKeyPress = (event) => {

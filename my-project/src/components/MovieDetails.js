@@ -47,7 +47,7 @@ const MovieDetail = () => {
       <div className="text-gray-300 p-10 absolute">
         <div className="grid grid-cols-5 gap-4">
           <div className="col-span-1">
-            <div className="relative w-96"> {/* Add a new div wrapper */}
+            <div className="relative w-94"> 
               <img
                 src={movie.Poster}
                 alt={movie.Title}
@@ -82,15 +82,15 @@ const MovieDetail = () => {
                   <p>{movie.imdbRating}</p>
                 </div>
               </div>
-              <div className="col-span-2 pt-2"> {/* Add padding to create space */}
+              <div className="col-span-2 pt-2">
                 <p className="font-bold">Genre:</p>
                 <p>{movie.Genre}</p>
               </div>
-              <div className="col-span-2 pt-2"> {/* Add padding to create space */}
+              <div className="col-span-2 pt-2">
                 <p className="font-bold">Actors:</p>
                 <p>{movie.Actors}</p>
               </div>
-              <div className="col-span-1 pt-2"> {/* Add padding to create space */}
+              <div className="col-span-1 pt-2">
                 <p className="font-bold">Plot:</p>
                 <p>{movie.Plot}</p>
               </div>
