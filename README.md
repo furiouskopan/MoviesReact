@@ -58,5 +58,5 @@ Before you begin, ensure you have the following installed on your system:
 
 ## Screenshots
 
-![WatchFlicks Screenshot 1](my-project/screenshots/moviesreact1.png)
-![WatchFlicks Screenshot 2](my-project/screenshots/moviesreact2.png)
+![WatchFlicks Screenshot 1](my-project/screenshots/moviesreact1.PNG)  
+![WatchFlicks Screenshot 2](my-project/screenshots/moviesreact1.PNG)
